@@ -1,0 +1,3 @@
+git add <file>    : put local <file> to the staging area
+git commit <file> : put staging <file> to the local repo
+git push <file>   : put local repo <file> to the remote repo
