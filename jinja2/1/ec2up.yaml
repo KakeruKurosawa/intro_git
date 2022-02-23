@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  vars_file:
+    - ec2up_vars.yml
+  tasks:
+    - name: Create ec2 instances.
+      ec2: >
+          keypair={{ keypair }}
+          group={{ group }}
+          instance_type={{  instance_type }}
+          image={{  image }}
+          region={{ region }}
+          count={{ number }}
+          wait=yes
+          zone={{ zone }}
+      register: ec2

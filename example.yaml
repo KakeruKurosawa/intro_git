@@ -1,0 +1,18 @@
+
+---
+
+- hosts: all # 配列の[0][0]
+
+  vars:      # 配列の[0][1]、マッピングをネストしているのでここには値が入らない
+    ntp_conf: /tmp/ntp.conf
+
+  task:      # 配列の[0][2]、シーケンスをネストしているのでここには値が入らない
+
+    - name: Install NTP  # 配列の[0][2][0]
+      yum: name=ntp state~installed
+
+    - name: Configure NTP  # 配列の[0][2][1]
+      copy: src={{ ntp_conf }} dest=/etc/ntp.conf
+
+    - name: Run and Enable NTP  # 配列の[0][2][2]
+      service: name=ntpd state=running enabled=yes

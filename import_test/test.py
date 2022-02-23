@@ -1,0 +1,2 @@
+import battle
+battle.attack()
