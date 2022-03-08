@@ -7,3 +7,6 @@ git add/rm
 
 git commit -v
 git log
+
+git diff : local と stageの差分
+git diff HEAD : stageとremoteの差分
