@@ -10,3 +10,10 @@ git log
 
 git diff : local と stageの差分
 git diff HEAD : stageとremoteの差分
+
+git push <remote_repository> <branch>
+git push origin master
+
+HEAD  : 現在のコミットを指すポインタ
+origin: リモートリポジトリのalias
+master: デフォルトのブランチ名（複数人でgitを使うときにブランチは使用）
