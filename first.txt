@@ -17,3 +17,10 @@ git push origin master
 HEAD  : 現在のコミットを指すポインタ
 origin: リモートリポジトリのalias
 master: デフォルトのブランチ名（複数人でgitを使うときにブランチは使用）
+
+git add .
+git commit
+git push origin master
+
+git status: HEADが指すコミット、ステージ、作業ツリーの差を表示
+ステージ、コミット直後はこれら3つに差はない
